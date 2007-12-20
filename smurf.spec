@@ -10,6 +10,7 @@ License: 	GPL
 Group: 		Sound
 URL: 		http://smurf.sourceforge.net
 Source: 	%name-%version.tar.bz2
+BuildRequires: audiofile-devel
 
 %description
 Smurf is a GTK based sound font editor. Sound font files are a collection of
