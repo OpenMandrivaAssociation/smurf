@@ -35,18 +35,16 @@ rm -rf $RPM_BUILD_ROOT
 
 %makeinstall
 
-(cd $RPM_BUILD_ROOT
-mkdir -p ./usr/lib/menu
-cat > ./usr/lib/menu/%{name} <<EOF
-?package(%{name}):\
-command="/usr/bin/smurf"\
-title="Smurf"\
-longtitle="GPL sound font editor"\
-needs="x11"\
-icon="sound_section.png"\
-section="Multimedia/Sound"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/smurf
+Name=Smurf
+Comment=GPL sound font editor
+Icon=sound_section
+Categories=Audio;
 EOF
-)
  
 %find_lang %name
  
@@ -63,5 +61,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README
 %_bindir/*
-%_menudir/*
+%{_datadir}/applications/mandriva-*.desktop
 
