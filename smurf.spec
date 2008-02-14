@@ -8,6 +8,7 @@ Version: 	%version
 Release: 	%release
 License: 	GPL
 Group: 		Sound
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: 		http://smurf.sourceforge.net
 Source: 	%name-%version.tar.bz2
 BuildRequires: audiofile-devel gtk-devel sndfile-devel
