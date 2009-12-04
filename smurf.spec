@@ -11,6 +11,7 @@ Group: 		Sound
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: 		http://smurf.sourceforge.net
 Source: 	%name-%version.tar.bz2
+Patch0:		smurf-0.52.6-gcc4.patch
 BuildRequires: audiofile-devel gtk-devel sndfile-devel
 
 %description
@@ -25,6 +26,7 @@ sound synthesis environment that can be supported in hardware or software.
 rm -rf $RPM_BUILD_ROOT
 
 %setup -q
+%patch0 -p1
 
 %build
 
