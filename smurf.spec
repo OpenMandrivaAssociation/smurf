@@ -1,6 +1,6 @@
 %define name	smurf
 %define version	0.52.6
-%define release	%mkrel 10
+%define release	%mkrel 11
 
 Summary: 	A GPL sound font editor
 Name: 		%name
