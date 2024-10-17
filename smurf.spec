@@ -9,7 +9,7 @@ Release: 	%release
 License: 	GPL
 Group: 		Sound
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL: 		http://smurf.sourceforge.net
+URL: 		https://smurf.sourceforge.net
 Source: 	%name-%version.tar.bz2
 Patch0:		smurf-0.52.6-gcc4.patch
 BuildRequires: audiofile-devel gtk-devel sndfile-devel
