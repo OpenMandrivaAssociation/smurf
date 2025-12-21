@@ -12,6 +12,11 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: 		https://smurf.sourceforge.net
 Source: 	%name-%version.tar.bz2
 Patch0:		smurf-0.52.6-gcc4.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: audiofile-devel gtk-devel sndfile-devel
 
 %description
